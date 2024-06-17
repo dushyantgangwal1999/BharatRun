@@ -34,4 +34,5 @@ android {
 
 dependencies {
     implementation(libs.org.mongodb.bson) // For generating mongodb Ids
+    implementation(projects.core.domain)
 }
