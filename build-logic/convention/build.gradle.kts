@@ -23,5 +23,9 @@ gradlePlugin{
          id = "bharatrun.android.application.compose"
          implementationClass = "AndroidApplicationComposeConventionPlugin"
       }
+      register("androidLibrary"){
+         id = "bharatrun.android.library"
+         implementationClass = "AndroidLibraryConventionPlugin"
+      }
    }
 }
