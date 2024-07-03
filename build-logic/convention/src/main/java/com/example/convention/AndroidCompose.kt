@@ -9,10 +9,11 @@ import org.gradle.kotlin.dsl.dependencies
 internal fun Project.configureAndroidCompose(
     commonExtension: CommonExtension<*,*,*,*,*>
 ){
-    extensions.configure<ApplicationExtension>{
+    commonExtension.run {
         buildFeatures {
             compose = true
         }
+
 
         composeOptions {
             kotlinCompilerExtensionVersion = libs
