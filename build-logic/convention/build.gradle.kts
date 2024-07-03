@@ -35,5 +35,9 @@ gradlePlugin{
          id = "bharatrun.android.feature.ui"
          implementationClass = "AndroidFeatureUIConventionPlugin"
       }
+      register("androidRoom"){
+         id = "bharatrun.android.room"
+         implementationClass = "AndroidRoomConventionPlugin"
+      }
    }
 }

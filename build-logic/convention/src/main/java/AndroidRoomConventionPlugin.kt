@@ -1,0 +1,38 @@
+import androidx.room.gradle.RoomExtension
+import com.example.convention.libs
+import org.gradle.api.Plugin
+import org.gradle.api.Project
+import org.gradle.kotlin.dsl.apply
+import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.dependencies
+
+class AndroidRoomConventionPlugin: Plugin<Project> {
+
+    override fun apply(target: Project) {
+
+       target.run {
+
+           pluginManager.run {
+               apply("androidx.room")
+               apply("com.google.devtools.ksp")     //Kotlin symbol Processing.
+               //because room relay's on Code generation
+           }
+
+
+           extensions.configure<RoomExtension>{
+               /**
+                * schemaDirectory("$projectDir/schemas"): Sets the directory
+                * where Room's schema files will be stored.
+                * This helps in managing Room's database schema versions.
+                */
+               schemaDirectory("$projectDir/schemas")
+           }
+
+           dependencies{
+               "implementation"(libs.findLibrary("room.runtime").get())
+               "implementation"(libs.findLibrary("room.ktx").get())
+               "ksp"(libs.findLibrary("room.compiler").get())
+           }
+       }
+    }
+}

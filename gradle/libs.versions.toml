@@ -124,6 +124,7 @@ bharatrun-android-application-compose = { id = "bharatrun.android.application.co
 bharatrun-android-library = { id = "bharatrun.android.library",version = "unspecified"}
 bharatrun-android-library-compose = { id = "bharatrun.android.library.compose",version = "unspecified"}
 bharatrun-android-feature-ui = { id = "bharatrun.android.feature.ui",version = "unspecified"}
+bharatrun-android-room = { id = "bharatrun.android.room",version = "unspecified"}
 
 
 [bundles]
