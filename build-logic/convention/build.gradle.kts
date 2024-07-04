@@ -19,5 +19,33 @@ gradlePlugin{
          id = "bharatrun.android.application"
          implementationClass = "AndroidApplicationConventionPlugin"
       }
+      register("androidApplicationCompose"){
+         id = "bharatrun.android.application.compose"
+         implementationClass = "AndroidApplicationComposeConventionPlugin"
+      }
+      register("androidLibrary"){
+         id = "bharatrun.android.library"
+         implementationClass = "AndroidLibraryConventionPlugin"
+      }
+      register("androidLibraryCompose"){
+         id = "bharatrun.android.library.compose"
+         implementationClass = "AndroidLibraryComposeConventionPlugin"
+      }
+      register("androidFeatureUI"){
+         id = "bharatrun.android.feature.ui"
+         implementationClass = "AndroidFeatureUIConventionPlugin"
+      }
+      register("androidRoom"){
+         id = "bharatrun.android.room"
+         implementationClass = "AndroidRoomConventionPlugin"
+      }
+      register("JvmLibrary"){
+         id = "bharatrun.jvm.library"
+         implementationClass = "JvmLibraryConventionPlugin"
+      }
+      register("JvmKtor"){
+         id = "bharatrun.jvm.ktor"
+         implementationClass = "JvmKtorConventionPlugin"
+      }
    }
 }

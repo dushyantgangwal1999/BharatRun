@@ -1,6 +1,8 @@
 plugins {
+    // Gradle will apply plugin in order we apply/Specify them
+    alias(libs.plugins.bharatrun.android.application.compose)
+    alias(libs.plugins.bharatrun.jvm.ktor) // Because we want to setup Ktor Dependency using DI
     alias(libs.plugins.mapsplatform.secrets.plugin)
-    alias(libs.plugins.bharatrun.android.application)
 }
 
 android {
@@ -14,21 +16,6 @@ android {
         }
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
