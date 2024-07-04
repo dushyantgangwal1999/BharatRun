@@ -1,6 +1,7 @@
 plugins {
     // Gradle will apply plugin in order we apply/Specify them
     alias(libs.plugins.bharatrun.android.application.compose)
+    alias(libs.plugins.bharatrun.jvm.ktor) // Because we want to setup Ktor Dependency using DI
     alias(libs.plugins.mapsplatform.secrets.plugin)
 }
 

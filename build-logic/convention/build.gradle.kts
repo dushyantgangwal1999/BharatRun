@@ -43,5 +43,9 @@ gradlePlugin{
          id = "bharatrun.jvm.library"
          implementationClass = "JvmLibraryConventionPlugin"
       }
+      register("JvmKtor"){
+         id = "bharatrun.jvm.ktor"
+         implementationClass = "JvmKtorConventionPlugin"
+      }
    }
 }

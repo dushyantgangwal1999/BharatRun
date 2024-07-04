@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.bharatrun.android.library)
+    alias(libs.plugins.bharatrun.jvm.ktor)
 }
 
 android {
