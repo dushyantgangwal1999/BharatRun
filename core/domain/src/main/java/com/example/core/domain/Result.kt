@@ -1,4 +1,4 @@
-package com.example.auth.domain.util
+package com.example.core.domain
 
 // Define a sealed interface Result with two possible states: Success and Error
 sealed interface Result<out D, out E : Error> {
@@ -6,7 +6,7 @@ sealed interface Result<out D, out E : Error> {
     data class Success<out D>(val data: D) : Result<D, Nothing>
 
     // Data class representing an error result with error of type E
-    data class Error<out E : com.example.auth.domain.util.Error>(val error: E) : Result<Nothing, E>
+    data class Error<out E : com.example.core.domain.Error>(val error: E) : Result<Nothing, E>
 }
 
 // Inline extension function for Result that transforms the success data using the provided mapping function

@@ -1,4 +1,4 @@
-package com.example.auth.domain.util
+package com.example.core.domain
 
 sealed interface DataError: Error {
     enum class Network: DataError {
