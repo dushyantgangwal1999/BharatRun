@@ -9,6 +9,7 @@ class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
         target.run {
             pluginManager.run {
                 apply("bharatrun.android.library")
+                apply("org.jetbrains.kotlin.plugin.compose")
             }
 
             val extensions = extensions.getByType<LibraryExtension>()

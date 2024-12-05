@@ -14,13 +14,6 @@ internal fun Project.configureAndroidCompose(
             compose = true
         }
 
-
-        composeOptions {
-            kotlinCompilerExtensionVersion = libs
-                .findVersion("composeCompiler")
-                .get()
-                .toString()
-        }
         /**
          * This setup ensures that your project uses a consistent set of
          * Jetpack Compose libraries that are known to work well together.
